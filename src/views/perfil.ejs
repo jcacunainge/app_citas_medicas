@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de perfil</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="../img/flaticon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/perfil.css"> <!-- Enlaza el archivo de estilos -->
+</head>
+<body>
+    <div class="container">
+
+        <section class="contenedor-perfil">
+            <img class="logo-usuario" src="../img/user.png" alt="">
+            <h3>[Nombre]</h3>
+            <p>Ubicación</p>
+        </section>
+
+        <section class="contenedor-general-perfil">
+            <hr>
+            <div class="contenedor-items-perfil">
+                <a href="/editarUsuario">
+                    <box-icon type='solid' name='user-circle'></box-icon>
+                    <p>Información personal</p>
+                </a>
+            </div>
+            
+            
+            
+            <hr>
+            <div class="contenedor-items-perfil">
+                <a href='/mostrarCitas'>
+                    <box-icon name='hand' type='solid'></box-icon>
+                    <p>Mis Citas</p>
+                </a>
+            </div>
+            <hr>
+            <div class="contenedor-items-perfil">
+                <a href="url_para_otra_informacion_personal">
+                    <box-icon type='solid' name='user-circle'></box-icon>
+                    <p>Otra información personal</p>
+                </a>
+            </div>
+            <hr>
+            <div class="contenedor-items-perfil">
+                <a href='/cerrarSesion'>
+                    <box-icon type='solid' name='log-out'></box-icon>
+                    <p>Cerrar sesión</p>
+                </a>
+            </div>
+        </section>
+        
+        <section class="contenedor-footer">
+            <div class="contenedor-items">
+                <a href="./perfil">
+                    <box-icon type='solid' name='user-circle'></box-icon>
+                    <p class="items-footer">Perfil</p>
+                </a>
+            </div>
+            <div class="contenedor-items">
+                <a href="./soporte">
+                    <box-icon type='solid' name='heart'></box-icon>
+                    <p class="items-footer">Soporte</p>
+                </a>
+            </div>
+            <div class="contenedor-items">
+                <a href='/mostrarCitas'>
+                    <box-icon name='hand' type='solid'></box-icon>
+                    <p class="items-footer">Mis Citas</p>
+                </a>
+            </div>
+        </section>
+        
+    </div>
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>

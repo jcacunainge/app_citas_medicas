@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de Citas</title>
+    <link rel="stylesheet" href="../css/turnos.css"> <!-- Enlaza el archivo de estilos -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="../img/flaticon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h3>Selección de citas habiles</h3>
+            
+        <!-- <input class="input" id="texto-input" type="text" placeholder="Coloca el lugar donde te encuentras" class="form-control" required> -->
+        <select class="input" id="ciudades-select" name="ciudades" class="form-control" required>
+            <option value="">Selecciona tu ubicación</option>
+            <option value="Palmar de Varela">Palmar de Varela</option>
+            <option value="Sabanagrande">Sabanagrande</option>
+            <option value="Ponedera">Ponedera</option>
+            <option value="Barranquilla">Barranquilla</option>
+            <option value="Malambo">Malambo</option>
+        </select>
+        
+        <button><box-icon name='search' class="fa" id="btn-ubicaciones"></box-icon></button>
+
+        <h4>Seleciona el hospital más cercano de tu interes</h4>
+
+        <form action="/informacionCita" method="post">
+
+            <div id="ubicaciones"></div>
+
+            <hr>
+            <div class="contenedor-radio-turnos">
+
+                <legend>Selecciona un tipo de cita:</legend><br>
+                <input type="radio" id="turnoNormal" name="tipo_cita" value="Cita Normal">
+                <label for="turnoNormal">Cita Normal</label><br>
+            
+                <input type="radio" id="turnoEspecial" name="tipo_cita" value="Cita Especial">
+                <label for="turnoEspecial">Cita Especial</label><br>
+            
+                <input type="radio" id="turnoPrioritario" name="tipo_cita" value="Cita Prioritario">
+                <label for="turnoPrioritario">Cita Prioritaria</label><br><br>
+                
+
+                <label for="hora">Seleccione la hora de su cita:</label>
+                <select name="hora_cita" id="hora">
+                    <option value="">Seleccione una hora</option>
+                    <option value="08:30">08:30 am</option>
+                    <option value="08:45">08:45 am</option>
+                    <option value="09:00">09:00 am</option>
+                    <option value="09:15">09:15 am</option>
+                    <option value="09:30">09:30 am</option>
+                    <option value="09:45">09:45 am</option>
+                    <option value="10:00">10:00 am</option>
+                    <option value="10:15">10:15 am</option>
+                    <option value="10:30">10:30 am</option>
+                    <option value="10:45">10:45 am</option>
+                    <option value="11:00">11:00 am</option>
+                    <option value="11:15">11:15 am</option>
+                    <option value="11:30">11:30 am</option>
+                    <option value="11:45">11:45 am</option>
+                    <option value="2:00">2:00 pm</option>
+                    <option value="2:15">2:15 pm</option>
+                    <option value="2:30">2:30 pm</option>
+                    <option value="2:45">2:45 pm</option>
+                    <option value="3:00">3:00 pm</option>
+                    <option value="3:15">3:15 pm</option>
+                    <option value="3:30">3:30 pm</option>
+                    <option value="3:45">3:45 pm</option>
+                    <option value="4:00">4:00 pm</option>
+                    <option value="4:15">4:15 pm</option>
+                    <option value="4:30">4:30 pm</option>
+                    <option value="4:45">4:45 pm</option>
+                </select> <br> <br>
+
+
+                <label for="fecha">Seleccione la fecha de su cita:</label>
+                <select name="fecha_cita" id="fecha">
+                    <option value="">Seleccione una opción</option>
+                    <!-- Las opciones de fecha se generarán con JavaScript -->
+                </select>
+
+            </div>
+
+            <br>
+            <button class="btn-selecionar">Seleccionar</a></button>
+
+        </form>
+        <section class="contenedor-footer">
+            <div class="contenedor-items">
+                <a href="./perfil">
+                    <box-icon type='solid' name='user-circle'></box-icon>
+                    <p class="items-footer">Perfil</p>
+                </a>
+            </div>
+            <div class="contenedor-items">
+                <a href="./soporte">
+                    <box-icon type='solid' name='heart'></box-icon>
+                    <p class="items-footer">Soporte</p>
+                </a>
+            </div>
+            <div class="contenedor-items">
+                <a href='/mostrarCitas'>
+                    <box-icon name='hand' type='solid'></box-icon>
+                    <p class="items-footer">Mis Citas </p>
+                </a>
+            </div>
+        </section>
+    </div>
+    <script src="../js/maps.js"></script>
+    <script src="../js/fechaCita.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBK5iyCWRAglHipzm1Kjy4T9a9FQx4U5fY&libraries=places&callback=inicializarMapa"></script>
+    <script src="../js/maps.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>

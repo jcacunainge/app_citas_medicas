@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de informacion personal</title>
+    <link rel="stylesheet" href="../css/registro.css"> <!-- Enlaza el archivo de estilos -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="../img/flaticon.png" type="image/x-icon">
+
+</head>
+<body>
+    <% if (user) { %>
+        <div class="container">
+            <h3>Editar tu información</h3>
+
+            <form action="/actualizarInformacion" method="post">
+                <input id="id" name="id" value="<%= user.id %>" hidden>
+                <div class="form-group">
+                    <div class="agrupacion-icons-label">
+                        <box-icon type='solid' name='user' size="sm" ></box-icon>
+                        <label class="label" for="nombre">Nombre y apellido:</label>
+                    </div>
+                    <input type="text" id="nombre_apellido" name="nombre_apellido" value="<%= user.nombre_apellido %>">
+                    
+                    <div class="agrupacion-icons-label">
+                        <box-icon name='id-card' size="sm"></box-icon>
+                        <label class="label" for="nombre">Número de documento:</label>
+                    </div>
+                    <input type="number" id="numero_documento" name="numero_documento" value="<%= user.numero_documento %>">
+                    
+                    <div class="agrupacion-icons-label">
+                        <box-icon type='solid' name='envelope' size="sm"></box-icon>
+                        <label class="label" for="nombre">Correo electrónico:</label>
+                    </div>
+                    <input type="email" id="correo" name="correo" value="<%= user.correo %>">
+
+                    <div class="agrupacion-icons-label">
+                        <box-icon type='solid' name='phone' size="sm"></box-icon>
+                        <label class="label" for="nombre">Número de teléfono:</label>
+                    </div>
+                    <input type="number" id="telefono" name="telefono" value="<%= user.telefono %>">
+        
+                    <div class="agrupacion-icons-label">
+                        <box-icon type='solid' name='key' size="sm"></box-icon>
+                        <label class="label" for="nombre">Contraseña:</label>
+                    </div>
+                    <input type="password" id="contraseña" name="contraseña">
+
+                    <div class="agrupacion-icons-label">
+                        <box-icon type='solid' name='key' size="sm"></box-icon>
+                        <label class="label" for="nombre">Contraseña:</label>
+                    </div>
+                    <input type="password" id="confirmarContraseña" name="confirmarContraseña">
+
+                </div>
+                <!-- Repite esta estructura para los demás campos -->
+                <button>Guardar información</button>
+            </form>
+        </div>
+
+    <% } %>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>

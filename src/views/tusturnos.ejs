@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de tus turnos</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="../img/flaticon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/misturnos.css"> <!-- Enlaza el archivo de estilos -->
+</head>
+<body>
+    <div class="container">
+        <h2>Información de tu cita</h2>
+        <section class="contenedor-turno">
+            <img src="../img/Cita medica.png" alt="cita-medica-img" width="">
+        </section>
+        
+<% if (userCita) { %>
+    <section>
+        <div class="info-turno">
+            <div class="contenedor-especificaciones-turnos">
+                <div class="icons-especificacion">
+                    <span><box-icon type='solid' name='edit-location'></box-icon></span>
+                    <p><%= userCita.ubicacion_cita %></p>
+                </div>
+                <div class="icons-especificacion">
+                    <span><box-icon type='solid' name='time-five'></box-icon></span>
+                    <p><%= userCita.hora_cita %></p>
+                </div>
+                <div class="icons-especificacion">
+                    <span><box-icon name='detail'></box-icon></span>
+                    <p><%= userCita.tipo_cita %></p>
+                </div>
+                <div class="icons-especificacion">
+                    <span><box-icon name='calendar' type='solid'></box-icon></span>
+                    <p><%= userCita.fecha_cita %></p>
+                </div>
+            </div>
+            <a href="./informacionTurnos"><button>Cambiar Cita</button></a>
+        </div>
+    </section>
+<% } %>
+        <section class="contenedor-footer">
+            <div class="contenedor-items">
+                <a href="./perfil">
+                    <box-icon type='solid' name='user-circle'></box-icon>
+                    <p class="items-footer">Perfil</p>
+                </a>
+            </div>
+            <div class="contenedor-items">
+                <a href="./soporte">
+                    <box-icon type='solid' name='heart'></box-icon>
+                    <p class="items-footer">Soporte</p>
+                </a>
+            </div>
+            <div class="contenedor-items">
+                <a href='/mostrarCitas'>
+                    <box-icon name='hand' type='solid'></box-icon>
+                    <p class="items-footer">Mi cita</p>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>

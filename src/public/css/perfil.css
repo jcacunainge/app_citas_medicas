@@ -1,0 +1,74 @@
+/* Estilos para la página de selección de turnos */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;600&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+    font-family: 'Oswald', sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo-usuario{
+    margin-top: 15px;
+    width: 180px;
+}
+.contenedor-general-perfil{
+    margin-top: 30px;
+}
+.contenedor-items-perfil a{
+    display: flex;
+    margin: 15px 0 20px 10px;
+}
+.contenedor-items-perfil a p{
+    margin-left: 4px;
+}
+.contenedor-items-perfil a:hover{
+    transform: scale(1.01);
+}
+
+
+.contenedor-footer{
+    width: 100%;
+    height: 80px;
+    background-color: #9a9da0;
+    display: flex;
+    justify-content: space-around;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+
+.contenedor-items{
+    margin-top: 15px;
+}
+.items-footer{
+    margin-top: -1px;
+}
+

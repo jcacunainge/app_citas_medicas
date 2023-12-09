@@ -1,0 +1,26 @@
+.card {
+    width: 370px;
+    height: 150px;
+    margin: 1.5rem auto;
+    background: #e4e3e3da;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1em 1.5em;
+    transition: all 0.5s ease;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+.card:hover {
+    background: #f1f1f1;
+}
+
+.card-body {
+    text-align: justify;
+
+
+
+} 
+
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de inicio de sesión</title>
+    <link rel="stylesheet" href="../css/style.css"> <!-- Enlaza el archivo de estilos -->
+    <link rel="shortcut icon" href="../img/flaticon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <img src="./img/logo.png" width="70%" alt="Logo">
+        <h2>Sign In</h2>
+        <div class="form-group">
+            <form action="/loginUsuario" method="post">
+                <label for="email">Email:</label>
+                <input type="email" id="correo" name="correo"> 
+                <label for="password">Contraseña:</label>
+                <input type="password" id="contraseña" name="contraseña"> 
+                <button type="submit" class="btn-login">Sign In</button> 
+            </form>
+        </div>
+        <div class="social-login">
+            <h4>Puedes ingresar con tus redes sociales</h4>
+            <div class="btn-redes">
+                <button class="btn-redes-sociales facebook-btn">Facebook</button>
+                <button class="btn-redes-sociales google-btn">Google</button>  
+            </div>
+        </div>
+        <div class="links">
+            <a href="#">Contraseña olvidada</a>
+            <a href="./registro">Crear una cuenta</a>
+        </div>
+    </div>
+</body>
+</html

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de turnos</title>
+    <link rel="stylesheet" href="../css/turnos.css"> <!-- Enlaza el archivo de estilos -->
+    <link rel="stylesheet" href="../css/soporte.css"> <!-- Enlaza el archivo de estilos -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="../img/flaticon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h3>Selección de turnos hábiles</h3>
+            
+        <div class="form-group ">
+            <input type="text" placeholder="Ingresa tu pregunta" class="form-control">
+            <box-icon name='search' class="fa"></box-icon>
+        </div>
+        <br>
+
+<!-- Card -->
+        <div id="container-preguntas"></div>
+        <div id="paginacion">
+            <button class="btn-paginacion" id="anterior">Anterior</button>
+            <button class="btn-paginacion" id="siguiente">Siguiente</button>
+        </div>
+<!-- fin de card -->
+
+        <section class="contenedor-footer">
+            <div class="contenedor-items">
+                <a href="./perfil">
+                    <box-icon type='solid' name='user-circle'></box-icon>
+                    <p class="items-footer">Perfil</p>
+                </a>
+            </div>
+            <div class="contenedor-items">
+                <a href="ruta_para_soporte.html">
+                    <box-icon type='solid' name='heart'></box-icon>
+                    <p class="items-footer">Soporte</p>
+                </a>
+            </div>
+            <div class="contenedor-items">
+                <a href='/mostrarCitas'>
+                    <box-icon name='hand' type='solid'></box-icon>
+                    <p class="items-footer">Mis Citas</p>
+                </a>
+            </div>
+        </section>
+    </div>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="../js/soporte.js"></script>
+</body>
+</html>
