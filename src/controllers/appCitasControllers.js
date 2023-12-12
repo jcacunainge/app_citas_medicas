@@ -5,12 +5,10 @@ async function informacionCita(req, res) {
 
         // Consulta para verificar si el usuario ya tiene una cita
         const queryVerificarCita = 'SELECT * FROM cita WHERE id = ?';
-
         req.getConnection((err, conn) => {
             if (err) {
                 throw err;
             }
-
             conn.query(queryVerificarCita, [userID], async (err, existingCitas) => {
                 if (existingCitas.length > 0) {
                     // Si el usuario ya tiene una cita, almacenarla en la sesión
@@ -31,7 +29,6 @@ async function informacionCita(req, res) {
                             tipo_cita,
                             ubicacion_cita
                         };
-
                         req.session.userCita = userCita;
                         console.log('Cita guardada en la sesión:', req.session.userCita);
                         res.render('tusturnos', { userCita });
@@ -56,13 +53,22 @@ async function mostrarCitas(req, res) {
             if (err) {
                 throw err;
             }
-
             conn.query(queryRecuperarCita, [userID], async (err, userCita) => {
                 if (err) {
                     throw err;
                 }
-
                 if (userCita && userCita.length > 0) {
+                    // Formatear la fecha para mostrarla en el formato deseado (YYYY-MM-DD)
+                    const fecha = new Date(userCita[0].fecha_cita);
+                    const formatearFecha = `${fecha.getFullYear()}-${('0' + (fecha.getMonth() + 1)).slice(-2)}-${('0' + fecha.getDate()).slice(-2)}`;
+                    
+                    // Obtener el nombre del día
+                    const diasSemana = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+                    const nombreDia = diasSemana[fecha.getDay()];
+
+                    // Modificar la fecha en el objeto userCita antes de enviarlo al renderizado
+                    userCita[0].fecha_cita = `${nombreDia}, ${formatearFecha}`;
+
                     // Si se encuentra la cita en la base de datos, renderizar la página con los datos de la cita
                     console.log('Datos de la cita encontrados en la base de datos:', userCita);
                     res.render('tusturnos', { userCita: userCita[0] }); // Suponiendo que solo hay una cita por usuario
@@ -76,6 +82,7 @@ async function mostrarCitas(req, res) {
         res.status(500).send("Ha ocurrido un error al mostrar la cita");
     }
 }
+
 
 
 module.exports = {

@@ -163,3 +163,6 @@ WHERE id_medico = 12;
 
 
 SELECT * FROM profesional_medico;
+
+-- Reiniciar contador de cada id
+ALTER TABLE cita AUTO_INCREMENT = 1;

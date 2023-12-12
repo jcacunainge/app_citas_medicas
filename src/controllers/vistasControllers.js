@@ -23,7 +23,9 @@ function soporte(req, res) {
     res.render('soporte');   
 }
 
-
+function medicos(req, res) {
+    res.render('medicos');   
+}
 module.exports={
     index,
     registro,
@@ -31,4 +33,6 @@ module.exports={
     perfil,
     tusturnos,
     soporte,
+    medicos,
+    
 }

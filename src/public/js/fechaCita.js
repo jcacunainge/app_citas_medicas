@@ -20,11 +20,13 @@ function generarFechas() {
   }
 }
 
-// Función para dar formato a la fecha (por ejemplo: "Día de la semana, DD de Mes de YYYY")
+
+// Función para dar formato a la fecha (solo año, mes y día)
 function formatearFecha(fecha) {
   var opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
   return fecha.toLocaleDateString('es-ES', opciones);
 }
+
 
 // Genera las fechas al cargar la página
 window.onload = function() {

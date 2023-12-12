@@ -34,7 +34,6 @@ async function loginUsuario(req, res) {
 
                     // Guardar el ID del usuario en la sesión
                     req.session.userID = informacion_user.id; // 'id' es el campo que almacena el ID del usuario en la tabla
-
                     console.log('Inicio de sesión exitoso');
                     res.redirect('/informacionTurnos');
                 } else {
